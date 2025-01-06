@@ -38,7 +38,7 @@ class World:
             print("Use all the informations releated with the province")
             return False
         province = World.get_province_from_coordinates(x, y)
-        return list(filter(find_neigh, World.__read_stations(province)))
+        return list(filter(find_neighbours, World.__read_stations(province)))
     @staticmethod(f)
     def get_province_from_coordinates(x: int, y: int):
         # use geolocalization in order to spot the current province of the input position
